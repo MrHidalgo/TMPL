@@ -1,0 +1,18 @@
+include _mixin/mixin
+include _mixin/macrosMixin
+
+
+doctype html
+
+html(
+    lang="en"
+    class="js"
+)
+
+    +headSite("", linkSite.styleLinkIndex, "")
+
+    body
+
+
+    - for(var i = 0; i < linkSite.scriptLink.length; i++)
+        script(src= linkSite.scriptLink[i])
